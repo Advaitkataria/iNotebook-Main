@@ -9,7 +9,7 @@ const NoteState = (props) => {
     const token = localStorage.getItem("token");
 
     const addNote = async (title, description, tag) => {
-        const response = await fetch(`https://inotebook-backend-vk49.onrender.com/api/notes/addnote`, {
+        const response = await fetch(`https://inotebook-backend-production-b457.up.railway.app/api/notes/addnote`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -22,7 +22,7 @@ const NoteState = (props) => {
     }
     const getNotes = async () => {
         const token = localStorage.getItem("token");
-        const response = await fetch("https://inotebook-backend-vk49.onrender.com/api/notes/fetchallnotes", {
+        const response = await fetch("https://inotebook-backend-production-b457.up.railway.app/api/notes/fetchallnotes", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -34,7 +34,7 @@ const NoteState = (props) => {
     };
 
     const deleteNote=async(id)=>{
-        const response = await fetch(`https://inotebook-backend-vk49.onrender.com/api/notes/deletenote/${id}`, {
+        const response = await fetch(`https://inotebook-backend-production-b457.up.railway.app/api/notes/deletenote/${id}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
@@ -47,7 +47,7 @@ const NoteState = (props) => {
     }
 
     const login=async({email,password})=>{
-        const response = await fetch(`https://inotebook-backend-vk49.onrender.com/api/auth/login`, {
+        const response = await fetch(`https://inotebook-backend-production-b457.up.railway.app/api/auth/login`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -60,7 +60,7 @@ const NoteState = (props) => {
        
     }
     const signup=async({name,email,password})=>{
-        const response = await fetch(` https://inotebook-backend-vk49.onrender.com/api/auth/createnewuser`, {
+        const response = await fetch(` https://inotebook-backend-production-b457.up.railway.app/api/auth/createnewuser`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -74,7 +74,7 @@ const NoteState = (props) => {
     }
 
     const editNote = async (id, title, description, tag) => {
-        const response = await fetch(`https://inotebook-backend-vk49.onrender.com/api/notes/updatenote/${id}`, {
+        const response = await fetch(`https://inotebook-backend-production-b457.up.railway.app/api/notes/updatenote/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
